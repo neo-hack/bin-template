@@ -3,14 +3,13 @@
   "version": "2.0.6",
   "description": "templates for command project",
   "license": "MIT",
-  "homepage": "https://github.com/JiangWeixian/templates#readme",
+  "homepage": "https://github.com/spring-catponents/bin-template#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JiangWeixian/templates.git",
-    "directory": "packages/bin-template"
+    "url": "git+https://github.com/spring-catponents/bin-template.git"
   },
   "bugs": {
-    "url": "https://github.com/JiangWeixian/templates/issues",
+    "url": "https://github.com/spring-catponents/bin-template/issues",
     "email": "jiangweixian1994@gmail.com"
   },
   "author": {
