@@ -1,5 +1,11 @@
 # @aiou/bin-template
 
+## 2.1.0
+
+### Minor Changes
+
+- 64f3d6e: exports function on main & module field
+
 ## 2.0.6
 
 ### Patch Changes
