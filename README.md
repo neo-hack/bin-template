@@ -14,7 +14,7 @@
 ## install 
 
 ```console
-npm install -g @aiou/bin-template
+pnpm i -g @aiou/bin-template
 ```
 
 ## commands
