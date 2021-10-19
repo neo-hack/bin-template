@@ -17,5 +17,5 @@
     "outDir": "lib"
   },
   "exclude": ["node_modules", "lib"],
-  "include": ["src"]
+  "include": ["bin"]
 }
