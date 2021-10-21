@@ -2,7 +2,7 @@ import execa from 'execa'
 import path from 'path'
 import pkg from '../package.json'
 
-const cli = path.resolve(__dirname, '../dist/cli.js')
+const cli = path.resolve(__dirname, '../lib/cli.js')
 
 describe('version', () => {
   it('print version should work', async () => {
