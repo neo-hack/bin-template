@@ -23,10 +23,8 @@
     "bin-template": "dist/cli.js"
   },
   "scripts": {
-    "prebuild": "rimraf lib",
-    "build": "tsc",
-    "pretest": "pnpm run build",
-    "test": "jest",
+    "build": "rimraf lib && tsc",
+    "test": "pnpm run build && jest",
     "ci:publish": "pnpm run build && pnpx changeset publish",
     "ci:version": "pnpx changeset version",
     "ci:snapshot": "pnpx changeset version --snapshot beta",
