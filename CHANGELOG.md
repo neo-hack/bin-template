@@ -1,5 +1,11 @@
 # @aiou/bin-template
 
+## 2.1.1
+
+### Patch Changes
+
+- c6f4847: add ci
+
 ## 2.1.0
 
 ### Minor Changes
