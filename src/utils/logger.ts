@@ -1,11 +1,11 @@
 // refs: https://github.com/vuejs/vue-cli/blob/v2/lib/logger.js
 import { format } from 'util'
-import chalk from 'chalk'
+import pc from 'picocolors'
 
 /**
  * Prefix.
  */
-const sep = chalk.gray('·')
+const sep = pc.gray('·')
 
 /**
  * Log a `message` to the console.
@@ -15,7 +15,7 @@ const sep = chalk.gray('·')
 
 const log = (...args: [any, ...any[]]) => {
   const msg = format.apply(format, args)
-  console.log(chalk.bgBlue.black(' info '), sep, msg)
+  console.log(pc.bgBlue(pc.black(' info ')), sep, msg)
 }
 
 /**
@@ -27,7 +27,7 @@ const log = (...args: [any, ...any[]]) => {
 const fatal = (...args: [any, ...any[]]) => {
   if (args[0] instanceof Error) args[0] = args[0].message.trim()
   const msg = format.apply(format, args)
-  console.error(chalk.bgRed.black(' failed '), sep, msg)
+  console.error(pc.bgRed(pc.black(' failed ')), sep, msg)
   process.exit(1)
 }
 
@@ -39,7 +39,7 @@ const fatal = (...args: [any, ...any[]]) => {
 
 const success = (...args: [any, ...any[]]) => {
   const msg = format.apply(format, args)
-  console.log(chalk.bgGreen.black(' success '), sep, msg)
+  console.log(pc.bgRed(pc.black(' success ')), sep, msg)
 }
 
 export default {
