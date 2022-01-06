@@ -4,8 +4,8 @@ import consola from 'consola'
 import pkg from '../package.json'
 
 const commands = {
-  hello: () => import('./hello').then((m) => m.hello),
-  loading: () => import('./loading').then((m) => m.loading),
+  hello: () => import('./commands/hello').then((m) => m.hello),
+  loading: () => import('./commands/loading').then((m) => m.loading),
 }
 
 const handler = (cmdName: string) => {

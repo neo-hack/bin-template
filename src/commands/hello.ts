@@ -1,7 +1,7 @@
 import inquirer from 'inquirer'
 import consola from 'consola'
 
-import logger from './utils/logger'
+import logger from '../utils/logger'
 
 const words = ['world', '𝔴𝔬𝔯𝔩𝔡', '🅦🅞🅡🅛🅓', '𝚠𝚘𝚛𝚕𝚍']
 
