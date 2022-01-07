@@ -1,12 +1,15 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "lib": ["es2016"],
+    "target": "ES2020",
+    "module": "ES2020",
+    "lib": ["ES2020"],
     "moduleResolution": "node",
-    "importHelpers": true,
-    "sourceMap": false,
+    "importHelpers": false,
+    "sourceMap": true,
+    "declaration": true,
+    "declarationDir": "dts",
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
@@ -14,8 +17,12 @@
     "noImplicitReturns": true,
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
-    "outDir": "lib"
+    "outDir": "lib",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "exclude": ["node_modules", "lib"],
-  "include": ["bin"]
+  "include": ["src"]
 }

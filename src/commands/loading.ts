@@ -1,6 +1,6 @@
 import ora from 'ora'
 
-import logger from './utils/logger'
+import logger from '../utils/logger'
 
 const spinner = ora('Loading')
 
