@@ -1,5 +1,11 @@
 # @aiou/bin-template
 
+## 3.0.0
+
+### Major Changes
+
+- db8c461: build with esm
+
 ## 2.1.1
 
 ### Patch Changes
