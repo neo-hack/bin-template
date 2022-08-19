@@ -5,6 +5,7 @@ import json from '@rollup/plugin-json'
 import { defineConfig } from 'rollup'
 import size from 'rollup-plugin-size'
 import esbuild from 'rollup-plugin-esbuild'
+import { externals } from 'rollup-plugin-node-externals'
 
 export default defineConfig([
   // CommonJS (for Node) and ES module (for bundlers) build.
@@ -17,6 +18,10 @@ export default defineConfig([
     input: 'src/cli.ts',
     preserveEntrySignatures: 'strict',
     plugins: [
+      externals({
+        devDeps: false,
+        builtinsPrefix: 'strip',
+      }),
       esbuild({
         minify: process.env.BUILD === 'production',
         sourceMap: true,
