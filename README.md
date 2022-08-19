@@ -12,7 +12,8 @@
 - Interaction interface with [**inquirer**](https://github.com/SBoudrias/Inquirer.js/) and [**ora**](https://github.com/sindresorhus/ora)
 - Type safe
 - Release with github workflows and changeset
-- PNPM
+- pnpm
+- vitest
 
 ## install 
 
