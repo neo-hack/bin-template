@@ -1,5 +1,13 @@
 # @aiou/bin-template
 
+## 3.0.1
+
+### Patch Changes
+
+- e7abd31: use local cz-emoji
+- aa7192f: vitest
+- c4b4bf2: pnpm 7
+
 ## 3.0.0
 
 ### Major Changes
