@@ -1,5 +1,11 @@
 # @aiou/bin-template
 
+## 3.1.0
+
+### Minor Changes
+
+- c76b7d9: upgrade eslint & add workflow permissions
+
 ## 3.0.1
 
 ### Patch Changes
