@@ -4,8 +4,8 @@ import consola from 'consola'
 import pkg from '../package.json'
 
 const commands = {
-  hello: () => import('./commands/hello').then((m) => m.hello),
-  loading: () => import('./commands/loading').then((m) => m.loading),
+  hello: () => import('./commands/hello').then(m => m.hello),
+  loading: () => import('./commands/loading').then(m => m.loading),
 }
 
 const handler = (cmdName: string) => {
@@ -28,5 +28,5 @@ cli
 program.parse(process.argv)
 
 consola.wrapConsole()
-process.on('unhandledRejection', (err) => consola.error('[unhandledRejection]', err))
-process.on('uncaughtException', (err) => consola.error('[uncaughtException]', err))
+process.on('unhandledRejection', err => consola.error('[unhandledRejection]', err))
+process.on('uncaughtException', err => consola.error('[uncaughtException]', err))

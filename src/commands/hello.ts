@@ -1,5 +1,5 @@
-import inquirer from 'inquirer'
 import consola from 'consola'
+import inquirer from 'inquirer'
 
 import logger from '../utils/logger'
 

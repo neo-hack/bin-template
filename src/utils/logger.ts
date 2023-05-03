@@ -1,5 +1,6 @@
 // refs: https://github.com/vuejs/vue-cli/blob/v2/lib/logger.js
-import { format } from 'util'
+import { format } from 'node:util'
+
 import pc from 'picocolors'
 
 /**
@@ -25,7 +26,9 @@ const log = (...args: [any, ...any[]]) => {
  */
 
 const fatal = (...args: [any, ...any[]]) => {
-  if (args[0] instanceof Error) args[0] = args[0].message.trim()
+  if (args[0] instanceof Error) {
+    args[0] = args[0].message.trim()
+  }
   const msg = format.apply(format, args)
   console.error(pc.bgRed(pc.black(' failed ')), sep, msg)
   process.exit(1)

@@ -4,7 +4,7 @@ import logger from '../utils/logger'
 
 const spinner = ora('Loading')
 
-type Options = {
+interface Options {
   text?: string
 }
 

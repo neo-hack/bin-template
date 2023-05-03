@@ -1,11 +1,11 @@
-import commonjs from '@rollup/plugin-commonjs'
 import alias from '@rollup/plugin-alias'
-import { nodeResolve } from '@rollup/plugin-node-resolve'
+import commonjs from '@rollup/plugin-commonjs'
 import json from '@rollup/plugin-json'
+import { nodeResolve } from '@rollup/plugin-node-resolve'
 import { defineConfig } from 'rollup'
-import size from 'rollup-plugin-size'
 import esbuild from 'rollup-plugin-esbuild'
 import { externals } from 'rollup-plugin-node-externals'
+import size from 'rollup-plugin-size'
 
 export default defineConfig([
   // CommonJS (for Node) and ES module (for bundlers) build.
