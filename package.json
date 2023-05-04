@@ -1,9 +1,14 @@
 {
   "name": "@aiou/bin-template",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "type": "module",
   "description": "templates for cli project",
-  "keywords": ["aiou", "cli", "neo", "template"],
+  "keywords": [
+    "aiou",
+    "cli",
+    "neo",
+    "template"
+  ],
   "license": "MIT",
   "engines": {
     "node": ">=12.20.0"
