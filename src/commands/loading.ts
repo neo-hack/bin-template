@@ -1,5 +1,5 @@
-import ora from 'ora'
 import consola from 'consola'
+import ora from 'ora'
 
 const spinner = ora('Loading')
 
