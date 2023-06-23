@@ -1,5 +1,20 @@
 # @aiou/bin-template
 
+## 4.0.0
+
+### Major Changes
+
+- 9bb21ef: cac & node16
+
+### Minor Changes
+
+- 9bb21ef: node sourcemap support
+
+### Patch Changes
+
+- 9bb21ef: add packageManager
+- 9bb21ef: deprecated node14
+
 ## 3.1.0
 
 ### Minor Changes
