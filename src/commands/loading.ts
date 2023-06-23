@@ -1,6 +1,5 @@
+import consola from 'consola'
 import ora from 'ora'
-
-import logger from '../utils/logger'
 
 const spinner = ora('Loading')
 
@@ -17,9 +16,9 @@ export const loading = (
     spinner.start()
     setTimeout(() => {
       spinner.stop()
-      logger.success('💅')
+      console.log('💅')
     }, ms)
   } catch (e) {
-    logger.fatal(e)
+    consola.error(e)
   }
 }

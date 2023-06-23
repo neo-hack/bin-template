@@ -1,13 +1,12 @@
 import consola from 'consola'
 import inquirer from 'inquirer'
-
-import logger from '../utils/logger'
+import pc from 'picocolors'
 
 const words = ['world', '𝔴𝔬𝔯𝔩𝔡', '🅦🅞🅡🅛🅓', '𝚠𝚘𝚛𝚕𝚍']
 
 export const hello = async (word: string) => {
   if (word) {
-    logger.log(`hello ${word}`)
+    console.log(`${pc.bgBlue('hello world')}`)
     return
   }
   try {
@@ -24,7 +23,7 @@ export const hello = async (word: string) => {
         }),
       },
     ])
-    logger.log(`hello ${answers.word}`)
+    console.log(`${pc.bgBlue(pc.black(' info '))} ${answers.word}`)
   } catch (e) {
     consola.error(e)
   }

@@ -1,4 +1,7 @@
-import { program } from 'commander'
+// eslint-disable-next-line import/no-extraneous-dependencies
+import 'source-map-support/register.js'
+
+import cac from 'cac'
 import consola from 'consola'
 
 import pkg from '../package.json'
@@ -8,6 +11,8 @@ const commands = {
   loading: () => import('./commands/loading').then(m => m.loading),
 }
 
+const cli = cac('bin-template').version(pkg.version)
+
 const handler = (cmdName: string) => {
   return async function (...args: any[]) {
     const cmd = await commands[cmdName]()
@@ -15,17 +20,16 @@ const handler = (cmdName: string) => {
   }
 }
 
-const cli = program.version(pkg.version).name('bin-template')
-
-cli.command('hello [word]').description('say hello').alias('hi').action(handler('hello'))
+cli.command('hello [word]', 'say hello').alias('hi').action(handler('hello'))
 
 cli
-  .command('loading [ms]')
-  .description('loading')
+  .command('loading [ms]', 'loading')
   .option('-t, --text [text]', 'define loading text')
   .action(handler('loading'))
 
-program.parse(process.argv)
+cli.help()
+
+cli.parse(process.argv)
 
 consola.wrapConsole()
 process.on('unhandledRejection', err => consola.error('[unhandledRejection]', err))
