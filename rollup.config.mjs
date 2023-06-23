@@ -2,6 +2,7 @@ import alias from '@rollup/plugin-alias'
 import commonjs from '@rollup/plugin-commonjs'
 import json from '@rollup/plugin-json'
 import { nodeResolve } from '@rollup/plugin-node-resolve'
+import replace from '@rollup/plugin-replace'
 import { defineConfig } from 'rollup'
 import esbuild from 'rollup-plugin-esbuild'
 import { externals } from 'rollup-plugin-node-externals'
@@ -17,14 +18,22 @@ export default defineConfig([
   {
     input: 'src/cli.ts',
     preserveEntrySignatures: 'strict',
+    external: ['source-map-support/register.js'],
     plugins: [
       externals({
         devDeps: false,
-        builtinsPrefix: 'strip',
+        builtinsPrefix: 'ignore',
+      }),
+      replace({
+        delimiters: ['', ''],
+        preventAssignment: true,
+        values: {
+          'import \'source-map-support/register.js\';': '',
+        },
       }),
       esbuild({
-        minify: process.env.BUILD === 'production',
-        sourceMap: true,
+        minify: false,
+        sourceMap: process.env.BUILD !== 'production',
         target: 'es2021',
       }),
       alias({
@@ -42,7 +51,7 @@ export default defineConfig([
     ],
     output: [
       {
-        sourcemap: true,
+        sourcemap: process.env.BUILD !== 'production',
         entryFileNames: '[name].mjs',
         dir: 'lib',
         chunkFileNames: 'chunks/[name].mjs',

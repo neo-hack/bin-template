@@ -1,3 +1,6 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
+import 'source-map-support/register.js'
+
 import cac from 'cac'
 import consola from 'consola'
 
