@@ -25,6 +25,7 @@ export default defineConfig([
       esbuild({
         minify: process.env.BUILD === 'production',
         sourceMap: true,
+        target: 'es2021',
       }),
       alias({
         resolve: ['.ts', '.js', '.tsx', '.jsx'],
